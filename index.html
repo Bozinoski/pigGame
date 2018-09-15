@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        
+        <title>Pig Game</title>
+    </head>
+
+    <body>
+        <img src="dice-empty.png" class="dHold" id="one-1">
+        <img src="dice-empty.png" class="dHold" id="one-2">
+        <img src="dice-empty.png" class="dHold" id="one-3">
+        <img src="dice-empty.png" class="dHold" id="two-1">
+        <img src="dice-empty.png" class="dHold" id="two-2">
+        <img src="dice-empty.png" class="dHold" id="two-3">
+        <div class="wrapper clearfix">
+            <h3 id="win-score">100</h3>
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+            
+            
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            <button class="btn-options"><i class="ion-ios-cog"></i>Options</button>
+            <button class="btn-rules"><i class="ion-ios-help"></i>Rules</button>
+            
+            <div class="options">
+                <h4>Player Names</h4>
+                <input id="player-0-name" type="text" name="player0" value="Player 1" placeholder="Enter Player 1 Name"><br>
+                <input id="player-1-name" type="text" name="player1" value="Player 2" placeholder="Enter Player 2 Name">
+                <h4>Game Length</h4>
+                <input id="game-length" type="text" name="gameLength" value="100" placeholder="Enter Game Length">
+                <button class="btn-close" type="submit"><i class="ion-ios-close"></i>Close</button>
+            </div>
+            <div class="rules">
+                <div class="content">
+                    <h1>Rules</h1>
+                    <ul>
+                        <li>Player 1 always stats the game first</li>
+                        <li>Hit "ROLL DICE" to roll the dice</li>
+                        <li>Score from the rolled dice will appear to your current score</li>
+                        <li>You can choose to roll as many times as they want, as long as its your trun</li>
+                        <li>You can loose your turn by rolling "1" on one or both of your dice</li>
+                        <li>If "1" is rolled on one of your dice, you loose your current score</li>
+                        <li>If "1" is rolled on both of the dice, you loose your total score.</li>
+                        <li>If both dices are the same other then "1" and "1", the score rolled is multipled by 2.</li>
+                        <li>You can choose to hold your curent score at any time during your turn</li>
+                        <li>Hitting hold will save your curent score to your total score, but you will loose your turn</li>
+                        <li>First player that will reach the set goal with their total points will win the game</li>
+                    </ul>
+                </div>
+                <button class="btn-close-rules" type="submit"><i class="ion-ios-close"></i>Close</button>
+            </div>
+
+            
+            <img src="dice-5.png" alt="Dice" class="dice" id="dice-1">
+            <img src="dice-5.png" alt="Dice" class="dice" id="dice-2">
+            <!--<input type="text" min="50" max="200" id="game-length" placeholder="Enter Game Length">-->
+        
+        <script src="app.js"></script>
+    </body>
+</html>
